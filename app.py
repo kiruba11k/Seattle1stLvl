@@ -85,7 +85,7 @@ def generate_message(state: ProspectMessageState) -> ProspectMessageState:
     ).strip()
     clean_background = re.sub(r'\s{2,}', ' ', clean_background)  # Remove extra spaces
 
-  prompt = f"""
+    prompt = f"""
 IMPORTANT: Output ONLY the message itself. 
 Do NOT include explanations, labels, or introductions.
 Write a short LinkedIn coffee meetup message using this structure:
