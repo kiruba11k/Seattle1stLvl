@@ -140,14 +140,14 @@ Hi {prospect_first_name},"""
                 message = message.split("\n", 1)[-1].strip()
 
         connection_phrases = ["look forward", "would be great", "hope to connect", "love to connect", "looking forward"]
-        if not any(phrase in message.lower() for phrase in connection_phrases):
-            message += "\nI'll be there too & looking forward to catching up with you at the event."
-        if state['company'].lower() not in message.lower():
-            message = message.replace(
-                f"Hi {prospect_first_name},",
-                f"Hi {prospect_first_name},\nI see that you will be attending  {state.get('event_name', '')}.",
-                1
-            )
+        # if not any(phrase in message.lower() for phrase in connection_phrases):
+        #     message += "\nI'll be there too & looking forward to catching up with you at the event."
+        # if state['company'].lower() not in message.lower():
+        #     message = message.replace(
+        #         f"Hi {prospect_first_name},",
+        #         f"Hi {prospect_first_name},\nI see that you will be attending  {state.get('event_name', '')}.",
+        #         1
+        #     )
 
             
         if message.count(f"Best, {my_name}") > 1:
